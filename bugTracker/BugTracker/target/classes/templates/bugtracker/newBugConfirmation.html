@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Blog Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h3>New Bug Form</h3>
+    <p>Bug Added</p>
+    <h4>Issue</h4>
+    <p th:text="${title}" />
+    <p th:text="${description}" />
+    <p th:text="${targetDateString}" />
+  </body>
+</html>

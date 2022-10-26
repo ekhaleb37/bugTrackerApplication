@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+  <head>
+    <title>The Bug Swatter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body>
+    <h1>Welcome to my bug tracker Site!</h1>
+    <h3>Create an account now!</h3>
+    <p>Please enter the details of your bug</p>
+    <form action="#" th:action="@{/}" th:object="${bug}" method="post">
+    	<table>
+	    	<tr>
+	    		<td>Title:</td>
+	    		<td><input type="text" th:field="*{title}" /></td>
+	    	</tr>
+	    	<tr>
+	    		<td>Description:</td>
+	    		<td><input type="text" th:field="*{description}" /></td>
+	    	</tr>
+	    	<tr>
+	    		<td>Target Completion Date(MM-dd-yyyy):</td>
+	    		<td><input type="text" th:field="*{targetDateString}" /></td>
+	    	</tr>
+	    	<tr>
+			    <td><button type="submit">Submit</button></td>
+			</tr>
+    	</table>	
+    </form>
+  </body>
+</html>
